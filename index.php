@@ -16,9 +16,6 @@ if(isset($_COOKIE['ACTIVE_NOTE_ID'])) {
         $activeNoteId = $_COOKIE['ACTIVE_NOTE_ID'];
     }
 }
-echo " Hello World " ;
-echo " Hello World " ;
-echo " Hello World " ;
 
 
 if(isset($_REQUEST['action'])) {
