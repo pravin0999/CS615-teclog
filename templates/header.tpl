@@ -5,8 +5,9 @@
     <script>
     function formSubmit()
     {
+    	$GLOBALS['flag'] = "T";
     document.getElementById("updateForm").submit();
-    document.getElementById("email").submit();
+
     }
     </script>
 </head>
