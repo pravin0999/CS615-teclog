@@ -23,7 +23,7 @@
             &nbsp;|&nbsp;
             <span class="right">Pravin kumar Lakshmanaperumal</span>
         </div>
-        <div>
+        <div background-image: yellow>
             {foreach from=$notes item=note}
                 {if $note.id eq $ACTIVE_NOTE_ID}
                 <span id="timestamp">{$note.last_modified|date_format:"%B %d, %r"}</span>
