@@ -4,7 +4,7 @@
     
     <div id="notes-list">
         <div id="notes-list-header" class="header">
-            <span class="left">Post by shyam</span>
+            <span class="left">miNotes</span>
             <span class="right"><a href="index.php?action=new"><img src="images/CreateNote.png" alt="Create new note."></a></span>
         </div>
         {foreach from=$notes item=note}
@@ -14,19 +14,24 @@
             </div>      
         {/foreach}
     </div>
-    
+   
+                        
     <div id="notepad">
         <div id="notepad-header" class="header">
-            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>
-         
-        <span class=“center”>.                  Welcome to My Blog</span>   
-    <span class="right">
-           <script src="http://www.clocklink.com/embed.js"></script> <script type="text/javascript" language="JavaScript">obj=new Object;obj.clockfile="5012-black.swf";obj.TimeZone="Ireland_Dublin"; obj.width=91;obj.height=30;obj.wmode="transparent";showClock(obj);</script></span>
+
+            <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span> 
+            &nbsp;|&nbsp;
+            <span class="right">Pravin kumar Lakshmanaperumal</span>
         </div>
         <div>
             {foreach from=$notes item=note}
                 {if $note.id eq $ACTIVE_NOTE_ID}
                 <span id="timestamp">{$note.last_modified|date_format:"%B %d, %r"}</span>
+                <span class="right"><form method="post" action="index.php" id="email"> 
+                    <input type="email" name="email" placeholder="enter yout email">
+                    <button type="button" onclick="formSubmit()">send</button>
+                </form></span>
+                
                 <form action="index.php" method="POST" id="updateForm">
                     <div id="tinymce-holder">
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
@@ -36,6 +41,8 @@
                 {/if}
             {/foreach}
         </div>
+            
+
     </div>
 </div>
 

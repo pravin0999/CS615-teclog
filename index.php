@@ -17,6 +17,7 @@ if(isset($_COOKIE['ACTIVE_NOTE_ID'])) {
     }
 }
 
+
 if(isset($_REQUEST['action'])) {
     switch($_REQUEST['action']) {
         case 'delete':
@@ -41,7 +42,32 @@ if(isset($_REQUEST['action'])) {
     }
 }
 
+
+if(isset($_POST['email'])){
+    $email = $_POST['email'];
+    echo $email;
+}
+
+/*if(isset($_POST['email'])){
+   
+   // document.getElementById('updateForm').submit();
+
+      //Email information
+  $admin_email = $_POST['email'];
+  //$email = $_REQUEST['email'];
+  $subject = "mynotes"
+  $comment = $_REQUEST['content'];
+  
+  //send email
+  //mail($admin_email, $subject, $comment);
+  
+  //Email response
+  echo $admin_email;
+  echo $comment;
+}*/
+
 $template = new Smarty();
+
 if(isset($activeNoteId))
     $template->assign("ACTIVE_NOTE_ID", $activeNoteId);
 $template->assign("notes", $db->getNotes());
