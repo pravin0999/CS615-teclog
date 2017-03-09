@@ -48,7 +48,7 @@ if(isset($_POST['email']) && isset($_REQUEST['action'])){
     if(isset($_POST['flag'])){
     $flag = $_POST['flag'];
     echo $flag;
-    echo $_REQUEST['content';
+    //echo $_REQUEST['content';
     }
     echo $email;  
 }
