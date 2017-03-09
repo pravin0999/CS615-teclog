@@ -6,7 +6,7 @@
     function formSubmit()
     {
     document.getElementById("updateForm").submit();
-    document.getElementById("email").submit();
+    
     }
     </script>
 </head>

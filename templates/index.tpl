@@ -27,16 +27,14 @@
             {foreach from=$notes item=note}
                 {if $note.id eq $ACTIVE_NOTE_ID}
                 <span id="timestamp">{$note.last_modified|date_format:"%B %d, %r"}</span>
-                <span class="right"><form method="post" action="index.php" id="email"> 
-                    <input type="email" name="email" placeholder="enter yout email">
-                    <button type="button" onclick="formSubmit()">send</button>
-                </form></span>
                 
                 <form action="index.php" method="POST" id="updateForm">
                     <div id="tinymce-holder">
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
                     </div>  
                     <input type="hidden" name="action" value="update"/>
+                     <input type="email" name="email" placeholder="enter yout email">
+                    <button type="button" onclick="formSubmit()">send</button>
                 </form>
                 {/if}
             {/foreach}
