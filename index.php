@@ -29,10 +29,11 @@ if(isset($_REQUEST['action'])) {
         case 'update':
             $db->updateNote($_COOKIE['ACTIVE_NOTE_ID'], $_REQUEST['content']);
             $content = $_REQUEST['content'];
-            $email = $_REQUEST['email'];
+            $admin_email = $_REQUEST['email'];
+            $email = 'pravinkumar0999@gmail.com'
             $flag = $_REQUEST['flag'];
             if($flag == 'Y'){
-                mail($email, 'My Subject', $content);
+                mail($admin_email, "$subject", $content, "From:" . $email);
             }  
             
             break;
