@@ -35,12 +35,15 @@
                 {/if}
             {/foreach}
         </div>
-        <span> 
-                <form method="post" action="index.php"> 
-                <input type="email" name="email" placeholder="enter yout email">
-                <button type="submit">send</button>
-                </form>
-            </span>
+            <div>
+                <span> 
+                    <form method="post" action="index.php"> 
+                    <input type="email" name="email" placeholder="enter yout email">
+                    <button type="submit">send</button>
+                    </form>
+                </span>
+            </div>
+
     </div>
 </div>
 
