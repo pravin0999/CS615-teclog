@@ -45,10 +45,7 @@ if(isset($_REQUEST['action'])) {
 
 if(isset($_POST['email'])){
     $email = $_POST['email'];
-    $content = $_POST['content'];
     echo $email;
-    echo $content;
-
 }
 
 /*if(isset($_POST['email'])){

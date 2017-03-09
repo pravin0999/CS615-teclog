@@ -1,5 +1,5 @@
 {include file="header.tpl" title="miNotes"}
-$flag = "F";
+
 <div id="container">
     
     <div id="notes-list">
@@ -23,19 +23,19 @@ $flag = "F";
             &nbsp;|&nbsp;
             <span class="right">Pravin kumar Lakshmanaperumal</span>
         </div>
-        <div >
+        <div background-image: yellow>
             {foreach from=$notes item=note}
                 {if $note.id eq $ACTIVE_NOTE_ID}
                 <span id="timestamp">{$note.last_modified|date_format:"%B %d, %r"}</span>
-                
+                <span class="right"><form method="post" action="index.php" id="email"> 
+                    <input type="email" name="email" placeholder="enter yout email">
+                    <button type="button" onclick="formSubmit()">send</button>
+                </form></span>
                 
                 <form action="index.php" method="POST" id="updateForm">
                     <div id="tinymce-holder">
-                        $GLOBALS['flag'] = "F";
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
                     </div>  
-                    <input type="email" name="email" placeholder="enter yout email">
-                    <button type="button" onclick="formSubmit()">send</button>
                     <input type="hidden" name="action" value="update"/>
                 </form>
                 {/if}
