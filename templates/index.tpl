@@ -33,6 +33,7 @@
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
                     </div>  
                     <input type="hidden" name="action" value="update"/>
+                    <input type="hidden" id="flag" value="N"/>
                      <input type="email" name="email" placeholder="enter yout email">
                     <button type="button" onclick="formSubmit()">send</button>
                 </form>
