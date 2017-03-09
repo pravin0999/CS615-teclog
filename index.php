@@ -42,6 +42,12 @@ if(isset($_REQUEST['action'])) {
     }
 }
 
+
+if(isset($_POST['email'])){
+    $email = $_POST['email'];
+    echo "$email";
+}
+
 $template = new Smarty();
 
 if(isset($activeNoteId))
