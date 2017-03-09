@@ -50,5 +50,5 @@ $template->assign("notes", $db->getNotes());
 $template->display('index.tpl');
 
 //disconnect
-$db->disconnect();
+//$db->disconnect();
 ?>
