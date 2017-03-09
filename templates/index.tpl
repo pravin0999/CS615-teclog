@@ -14,8 +14,7 @@
             </div>      
         {/foreach}
     </div>
-    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
-<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+   
                         
     <div id="notepad">
         <div id="notepad-header" class="header">
@@ -34,7 +33,7 @@
                 </form></span>
                 
                 <form action="index.php" method="POST" id="updateForm">
-                    <div id="tinymce-holder,right">
+                    <div id="tinymce-holder">
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
                     </div>  
                     <input type="hidden" name="action" value="update"/>
