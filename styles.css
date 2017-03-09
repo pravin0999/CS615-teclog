@@ -31,12 +31,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: none;
 }
 
-#content {
-    
-    border-right: 1px solid lightgrey; 
-    color: #AE9F72;
-    overflow: none;
-}
+
 
 .notes-list-item-title {
     float: left; 
@@ -75,6 +70,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     height: auto;
     width: auto;
+    color: grey;
+    background-color: #3CBC8D;
 }
 
 .left {
