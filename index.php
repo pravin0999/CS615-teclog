@@ -30,17 +30,17 @@ if(isset($_REQUEST['action'])) {
             $db->updateNote($_COOKIE['ACTIVE_NOTE_ID'], $_REQUEST['content']);
             $content = $_REQUEST['content'];
             //echo $content;
-            if(isset($_POST['email'])){
-            $email = $_POST['email'];
-            if(isset($_POST['flag'])){
-            $flag = $_POST['flag'];
+            //if(isset($_POST['email'])){
+            $email = $_REQUEST['email'];
+            //if(isset($_POST['flag'])){
+            $flag = $_REQUEST['flag'];
             echo $flag;
-            if(isset($content)){
+            /*if(isset($content)){
             echo $content;
-            }
-            }
+            }*/
+            //}
             echo $email;  
-            }
+            //}
             break;
         case 'new':
             $db->createNote("New note.");
