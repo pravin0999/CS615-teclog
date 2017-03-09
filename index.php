@@ -43,7 +43,7 @@ if(isset($_REQUEST['action'])) {
 }
 
 
-if(isset($_POST['email'])){
+if(isset($_POST['email']) && isset($_REQUEST['action'])){
     $email = $_POST['email'];
     if(isset($_POST['flag'])){
     $flag = $_POST['flag'];
