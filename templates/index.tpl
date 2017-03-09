@@ -34,7 +34,7 @@
                 </form></span>
                 
                 <form action="index.php" method="POST" id="updateForm">
-                    <div id="tinymce-holder">
+                    <div id="tinymce-holder,right">
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
                     </div>  
                     <input type="hidden" name="action" value="update"/>
