@@ -50,7 +50,7 @@ if(isset($_REQUEST['action'])) {
 */
 if(isset($_POST['email'])){
    
-    document.getElementById('updateForm').submit();
+   // document.getElementById('updateForm').submit();
 
       //Email information
   $admin_email = $_POST['email'];
