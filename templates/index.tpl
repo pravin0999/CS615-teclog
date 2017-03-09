@@ -20,19 +20,17 @@
 
             <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span> 
             &nbsp;|&nbsp;
-            
-                    <form method="post" action="index.php"> 
-                    <input type="email" name="email" placeholder="enter yout email">
-                    <button type="submit">send</button>
-                    </form>
-                
-           
             <span class="right">Pravin kumar Lakshmanaperumal</span>
         </div>
         <div>
             {foreach from=$notes item=note}
                 {if $note.id eq $ACTIVE_NOTE_ID}
                 <span id="timestamp">{$note.last_modified|date_format:"%B %d, %r"}</span>
+                <span class="right"><form method="post" action="index.php"> 
+                    <input type="email" name="email" placeholder="enter yout email">
+                    <button type="submit">send</button>
+                </form></span>
+                
                 <form action="index.php" method="POST" id="updateForm">
                     <div id="tinymce-holder">
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
