@@ -18,7 +18,7 @@
     <div id="notepad">
         <div id="notepad-header" class="header">
             <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span> 
-            &nbsp;|&nbsp;<span> 
+            &nbsp;|&nbsp;
                 <form method="post" action="index.php"> 
                 <input type="email" name="email" placeholder="enter yout email">
                 <button type="submit">send</button>
