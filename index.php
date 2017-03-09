@@ -28,6 +28,15 @@ if(isset($_REQUEST['action'])) {
             break;
         case 'update':
             $db->updateNote($_COOKIE['ACTIVE_NOTE_ID'], $_REQUEST['content']);
+            if(isset($_POST['email'])){
+            $email = $_POST['email'];
+            if(isset($_POST['flag'])){
+            $flag = $_POST['flag'];
+            echo $flag;
+            //echo $_REQUEST['content';
+            }
+            echo $email;  
+            }
             break;
         case 'new':
             $db->createNote("New note.");
@@ -43,15 +52,7 @@ if(isset($_REQUEST['action'])) {
 }
 
 
-if(isset($_POST['email']) ){
-    $email = $_POST['email'];
-    if(isset($_POST['flag'])){
-    $flag = $_POST['flag'];
-    echo $flag;
-    //echo $_REQUEST['content';
-    }
-    echo $email;  
-}
+
 
 /*if(isset($_POST['email'])){
    
