@@ -43,12 +43,12 @@ if(isset($_REQUEST['action'])) {
 }
 
 
-/*if(isset($_POST['email'])){
+if(isset($_POST['email'])){
     $email = $_POST['email'];
     echo "$email";
 }
-*/
-if(isset($_POST['email'])){
+
+/*if(isset($_POST['email'])){
    
    // document.getElementById('updateForm').submit();
 
@@ -64,7 +64,7 @@ if(isset($_POST['email'])){
   //Email response
   echo $admin_email;
   echo $comment;
-}
+}*/
 
 $template = new Smarty();
 
