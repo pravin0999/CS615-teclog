@@ -5,7 +5,7 @@
     <script>
     function formSubmit()
     {
-    var textbox = document.getElementById('flag');
+    var textbox = document.getElementsByName('flag')[0]
     textbox.value = 'Y';
     document.getElementById("updateForm").submit();
     
