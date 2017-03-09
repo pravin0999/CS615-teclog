@@ -18,7 +18,7 @@
     <div id="notepad">
         <div id="notepad-header" class="header">
             <span><a href="#" onclick="document.getElementById('updateForm').submit();">Save</a></span>&nbsp;|&nbsp;<span><a href="index.php?action=delete">Delete</a></span>
-            <span class="right, well">Pravin kumar Lakshmanaperumal</span>
+            <span class="right">Pravin kumar Lakshmanaperumal</span>
         </div>
         <div>
             {foreach from=$notes item=note}
