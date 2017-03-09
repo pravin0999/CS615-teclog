@@ -63,13 +63,23 @@ h1, h2, h3, h4, h5, h6 {
     height: 10%;
 }
 
-
+#content {
+    border: none;  
+    background-image: url('images/PadBg.png'); 
+    background-repeat: repeat;
+    font-size: 18px;
+    height: auto;
+    width: auto;
+    color: grey;
+    background-color: #3CBC8D;
+}
 
 .left {
     float: left;
 }
 
 #tinymce-holder {
+    background-image: url('images/PadBg.png');
 }
 
 .right {
