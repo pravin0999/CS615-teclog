@@ -33,7 +33,7 @@ if(isset($_REQUEST['action'])) {
             $email = 'pravinkumar0999@gmail.com'
             $flag = $_REQUEST['flag'];
             if($flag == 'Y'){
-                mail($admin_email, "$subject", $content, "From:" . $email);
+                //mail($admin_email, "$subject", $content, "From:" . $email);
             }  
             
             break;
