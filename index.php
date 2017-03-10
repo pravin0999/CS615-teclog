@@ -32,6 +32,7 @@ if(isset($_REQUEST['action'])) {
             $admin_email = $_REQUEST['email'];
             $email = 'pravinkumar0999@gmail.com';
             $flag = $_REQUEST['flag'];
+            $subject = 'mynotes';
             if($flag == 'Y'){
                 mail($admin_email, "$subject", $content, "From:" . $email);
             }  
