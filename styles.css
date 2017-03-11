@@ -48,8 +48,6 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('images/PadBg.png'); 
     background-repeat: repeat; 
     height: 100%;
-    margin-left: 262px;
-    margin-top: -32px;
 }
 
 .notes-list-item {
