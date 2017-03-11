@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     float: right; 
     color: #AE9F72;
     width: 80px;
+    margin-right: 2px;
 }
 
 #notepad {
