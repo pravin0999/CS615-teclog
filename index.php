@@ -21,11 +21,13 @@ if(isset($_COOKIE['ACTIVE_NOTE_ID'])) {
 if(isset($_REQUEST['action'])) {
     switch($_REQUEST['action']) {
         case 'delete':
+        /*triggered when the user deletes a notes and the system deletes the corresponding notes from the database*/
             $db->deleteNote($activeNoteId);
             $newId = $db->getMaxId();
             setcookie("ACTIVE_NOTE_ID", $newId);
             $activeNoteId = $newId;
             break;
+        /* to save the notes, when the user saves them*/
         case 'update':
             $db->updateNote($_COOKIE['ACTIVE_NOTE_ID'], $_REQUEST['content']);
             //ini_set('SMTP','myserver');
@@ -38,6 +40,7 @@ if(isset($_REQUEST['action'])) {
             $subject = 'mynotes';
             //echo $content;
             
+            /* email is sent when the user clicks send button */
             if($flag == 'Y'){
 
                 mail($admin_email, "$subject", $content, "From:" . $email);
@@ -45,11 +48,13 @@ if(isset($_REQUEST['action'])) {
             
             break;
         case 'new':
+        /* creating a new notes, when the user clicks on new button */
             $db->createNote("New note.");
             $newId = $db->getMaxId();
             setcookie("ACTIVE_NOTE_ID", $newId);
             $activeNoteId = $newId;
             break;
+        /* search for the corresponding notes */
         case 'navigate':
             setcookie("ACTIVE_NOTE_ID", $_REQUEST['id']);
             $activeNoteId = $_REQUEST['id'];
@@ -58,26 +63,6 @@ if(isset($_REQUEST['action'])) {
 }
 
 
-
-
-/*if(isset($_POST['email'])){
-   
-   // document.getElementById('updateForm').submit();
-
-      //Email information
-  $admin_email = $_POST['email'];
-  //$email = $_REQUEST['email'];
-  $subject = "mynotes"
-  $comment = $_REQUEST['content'];
-  
-  //send email
-  //mail($admin_email, $subject, $comment);
-  
-  //Email response
-  echo $admin_email;
-  echo $comment;
-}*/
-
 $template = new Smarty();
 
 if(isset($activeNoteId))
@@ -85,6 +70,6 @@ if(isset($activeNoteId))
 $template->assign("notes", $db->getNotes());
 $template->display('index.tpl');
 
-//disconnect
+//disconnect 
 $db->disconnect();
 ?>

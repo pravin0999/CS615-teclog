@@ -1,26 +1,29 @@
+
+/* applying CSS styling throughout the page*/
 * {
     font-family: sans-serif, arial;
 }
 
+/* CSS styling for body*/
 body {
     padding: 0px; 
     margin: 0px;
     min-width: 1200px;
 }
-
+/* CSS styling for the links*/
 a, a:visited {
     text-decoration: none;
     color: #E19807;
 }
-
+/* CSS styling for the links when active*/
 a.active {
     text-decoration: underline;
 }
-
+/* CSS styling for headings*/
 h1, h2, h3, h4, h5, h6 {
     color: #E19807
 }
-
+/* CSS styling for notes list*/
 #notes-list {
     width: 300px; 
     float: left; 
@@ -32,26 +35,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
+/* CSS styling for item-title in the notes */
 .notes-list-item-title {
     float: left; 
     width: 150px;
     margin-left: 1px;
 }
 
+/* CSS styling for timestamp in the notes */
 .notes-list-item-timestamp {
     float: right; 
     color: #AE9F72;
     width: 80px;
     margin-right: 2px;
 }
-
+/* CSS styling for notepad */
 #notepad {
     background-image: url('images/PadBg.png'); 
     background-repeat: repeat; 
     height: 100%;
 }
 
+/* CSS styling for notes list items*/
 .notes-list-item {
     width: 300px; 
     height: 30px; 
@@ -59,12 +64,20 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px; 
 }
 
+/* CSS styling for header in notepad*/
+#notepad-header{
+    color: cornflowerblue;
+    background-color: cornsilk;
+}
+
+/* CSS styling for timestamps*/
 #timestamp {
     font-weight: normal; 
     color: grey;
     height: 10%;
 }
 
+/* CSS styling for contents(textarea) in the notes*/
 #content {
     border: none;  
     background-image: url('images/PadBg.png'); 
@@ -76,10 +89,12 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #3CBC8D;
 }
 
+/* CSS styling for tag with class left */
 .left {
     float: left;
 }
 
+/* CSS styling for tag with tinymce-holder id */
 #tinymce-holder {
     right: -135px;
     top: -130;
@@ -89,11 +104,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 2;
 }
 
-
+/* CSS styling for right classed tag*/
 .right {
     float: right;
 }
-
+/* CSS styling for header classed tag*/
 .header {
     height: 25px;
     font-size: 20px;

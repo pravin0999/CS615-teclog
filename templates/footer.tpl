@@ -1,2 +1,6 @@
+<!--  footer template  -->
+
 </body>
 </html>
+
+

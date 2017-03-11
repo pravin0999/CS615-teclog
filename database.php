@@ -1,7 +1,7 @@
 <?php
 
 class Db {
-    
+    /* credentials for database access  */
     protected $con;
     private $host = "us-cdbr-azure-southcentral-f.cloudapp.net";
     private $user = "bb2888a2afc292";
@@ -28,7 +28,7 @@ class Db {
         $this->con = null;
         
     }
-
+    //creates table "notes" in the database
     public function createTable() {
         try {
             $sql = "CREATE TABLE IF NOT EXISTS notes (
@@ -43,7 +43,7 @@ class Db {
             echo $e->getMessage();
         }
     }
-
+    //deletes the table
     public function dropTable() {
         try {
             $sql = "DROP TABLE notes;";
@@ -53,7 +53,7 @@ class Db {
             echo $e->getMessage();
         }
     }
-
+    //insert a new note in the table
     public function createNote($content) {
         try {
             $query = $this->con->prepare("INSERT INTO notes (content) VALUES (:content);");
@@ -63,7 +63,7 @@ class Db {
             echo $e->getMessage();
         }
     }
-
+    //retrive a note from the table
     public function getNotes() {
         try{
             $query = $this->con->prepare("SELECT * FROM notes ORDER BY last_modified DESC;");
@@ -73,7 +73,7 @@ class Db {
             echo $e->getMessage();
         }
     }
-
+    // gets notes with minimum-id from the table
     public function getMinId() {
         try{
             $query = $this->con->prepare("SELECT min(id) FROM notes;");
@@ -83,7 +83,7 @@ class Db {
             echo $e->getMessage();
         }
     }
-
+    //gets notes with maximum-id from the table
     public function getMaxId() {
         try{       
             $query = $this->con->prepare("SELECT max(id) FROM notes;");
@@ -93,7 +93,7 @@ class Db {
             echo $e->getMessage();
         }
     }
-
+    //checking if the id for the note exists
     public function isValid($id) {
         try{
             $query = $this->con->prepare("SELECT * FROM notes WHERE id = :id;");
@@ -104,7 +104,7 @@ class Db {
             echo $e->getMessage();
         }
     }
-
+    //delete a note with a given id
     public function deleteNote($id) {
         try{          
             $query = $this->con->prepare("DELETE FROM notes WHERE id = :id;");
@@ -114,7 +114,7 @@ class Db {
             echo $e->getMessage();
         }
     }
-
+    //update a notes with a content which matches a particular id
     public function updateNote($id, $newContent) {
         try{
             $query = $this->con->prepare("UPDATE notes
