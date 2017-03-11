@@ -28,13 +28,16 @@ if(isset($_REQUEST['action'])) {
             break;
         case 'update':
             $db->updateNote($_COOKIE['ACTIVE_NOTE_ID'], $_REQUEST['content']);
+            ini_set('SMTP','myserver');
+            ini_set('smtp_port',25);
+            ini_set('sendmail_from','pravinkumar0999@gmail.com')
             $content = $_REQUEST['content'];
             $admin_email = $_REQUEST['email'];
             $email = 'pravinkumar0999@gmail.com';
             $flag = $_REQUEST['flag'];
             $subject = 'mynotes';
             //echo $content;
-            ini_set('sendmail_from','pravinkumar0999@gmail.com')
+            
             if($flag == 'Y'){
 
                 mail($admin_email, "$subject", $content, "From:" . $email);
