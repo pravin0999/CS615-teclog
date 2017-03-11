@@ -35,6 +35,7 @@ if(isset($_REQUEST['action'])) {
             $subject = 'mynotes';
             //echo $content;
             if($flag == 'Y'){
+                ini_set('sendmail_from','pravinkumar0999@gmail.com')
                 mail($admin_email, "$subject", $content, "From:" . $email);
             }  
             
