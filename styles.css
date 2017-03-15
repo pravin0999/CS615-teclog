@@ -19,6 +19,10 @@ a, a:visited {
 a.active {
     text-decoration: underline;
 }
+/* CSS styling for the links when hover*/
+a.active {
+    background-color: cornsilk;
+}
 /* CSS styling for headings*/
 h1, h2, h3, h4, h5, h6 {
     color: #E19807
