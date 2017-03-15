@@ -64,6 +64,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px; 
 }
 
+/* CSS styling for notes list items*/
+.notes-list-item:hover { background-color: #000000; }
+
 /* CSS styling for header in notepad*/
 #notepad-header{
     color: cornflowerblue;

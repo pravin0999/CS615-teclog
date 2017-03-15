@@ -1,4 +1,5 @@
 <?php
+/* to create the table and setting up the database for the first time */
 error_reporting(-1);
 ini_set('display_errors', 'On');
 
