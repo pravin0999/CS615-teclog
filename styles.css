@@ -20,7 +20,7 @@ a.active {
     text-decoration: underline;
 }
 /* CSS styling for the links when hover*/
-a.active {
+a:hover {
     background-color: cornsilk;
 }
 /* CSS styling for headings*/
