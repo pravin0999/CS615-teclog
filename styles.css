@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     float: left; 
     border-right: 1px solid lightgrey; 
     height: 100%; 
-    background-image: url("images/ListBg.png"); 
+    background-color: #957634; 
     background-repeat: repeat;
     overflow: none;
 }
