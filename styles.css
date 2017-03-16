@@ -19,7 +19,7 @@ a, a:visited {
 a.active {
     text-decoration: underline;
 }
-/* CSS styling for the links when hover*/
+/* CSS styling for the links when user hovers over the link*/
 a:hover {
     background-color: cornsilk;
 }

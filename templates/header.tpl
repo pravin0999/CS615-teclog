@@ -6,7 +6,8 @@
     <link rel="stylesheet" lang="text/css" href="styles.css"/>
      <script src="//cloud.tinymce.com/stable/tinymce.min.js"></script>
   <script>tinymce.init({ selector:'textarea' });</script>
-	<!-- javascript function for submitting the form -->		
+	<!-- javascript function for setting the value of the hidden textbox 
+    for internal operation while submitting the form -->		
     <script>
     function formSubmit()
     {
