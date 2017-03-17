@@ -33,8 +33,8 @@
                 
                 <form action="index.php" method="POST" id="updateForm">
                 <!-- email textbox and send button where the user can mail the notes when they click on the send button, on providing email-id -->
-                <!--   <input type="email" name="email" placeholder="enter yout email">
-                    <button type="button" onclick="formSubmit()">send</button>  -->
+                   <input type="email" name="email" placeholder="enter yout email">
+                    <button type="button" onclick="formSubmit()">send</button>  
                     <!-- the text area where the user can write notes -->
                     <div id="tinymce-holder">
                         <textarea rows="20" cols="90" id="content" name="content" style="margin: 20px; border: 1px grey solid">{$note.content}</textarea>
