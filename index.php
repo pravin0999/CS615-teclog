@@ -41,10 +41,10 @@ if(isset($_REQUEST['action'])) {
             //echo $content;
             
             /* email is sent when the user clicks send button */
-            /*if($flag == 'Y'){
+            if($flag == 'Y'){
 
                 mail($admin_email, "$subject", $content, "From:" . $email);
-            } */ 
+            } 
             
             break;
         case 'new':
